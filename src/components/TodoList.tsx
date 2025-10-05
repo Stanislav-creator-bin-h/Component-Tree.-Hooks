@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import TodoItem from './TodoItem';
-import AddTodoForm from './AddTodoForm';
+import React, { useState } from "react"
+import TodoItem from "./TodoItem"
+import AddTodoForm from "./AddTodoForm"
 
+interface Todo {
+  id: number
+  text: string
+  completed: boolean
+}
 
-function TodoList() {
-  const [todos, setTodos] = useState([])
+const TodoList: React.FC = () => {
+  const [todos, setTodos] = useState<Todo[]>([])
 
-  const handleAddTodo = (newText) => {
+  const handleAddTodo = (newText: string) => {
     if (newText.trim() === "") return
-    const newTodo = {
+    const newTodo: Todo = {
       id: Date.now(),
       text: newText,
       completed: false,
@@ -16,17 +21,25 @@ function TodoList() {
     setTodos([...todos, newTodo])
   }
 
-  const handleDeleteTodo = (id) => {
+  const handleDeleteTodo = (id: number) => {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
 
-  const handleToggleComplete = (id) => {
-    setTodos(todos.map((todo) => (todo.id === id ? { ...todo, completed: !todo.completed } : todo)))
+  const handleToggleComplete = (id: number) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    )
   }
 
-  const handleEditTodo = (id, newText) => {
+  const handleEditTodo = (id: number, newText: string) => {
     if (newText.trim() === "") return
-    setTodos(todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo)))
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, text: newText } : todo
+      )
+    )
   }
 
   return (

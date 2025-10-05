@@ -1,7 +1,7 @@
 # ⚛️ Todo List Application (Lab 3: Component Tree & Hooks)
 
 🔗 [Vercel Deployment]()  
-🔗 [GitHub Repository]()
+🔗 [GitHub Repository](https://github.com/Stanislav-creator-bin-h/Component-Tree.-Hooks)
 
 ## ✨ Функціональність
 
