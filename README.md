@@ -1,6 +1,6 @@
 # ⚛️ Todo List Application (Lab 3: Component Tree & Hooks)
 
-🔗 [Vercel Deployment]()  
+🔗 [Vercel Deployment](https://component-tree-hooks-xhp1-3qqeko0je-naezze-gmailcoms-projects.vercel.app/)  
 🔗 [GitHub Repository](https://github.com/Stanislav-creator-bin-h/Component-Tree.-Hooks)
 
 ## ✨ Функціональність
@@ -20,12 +20,13 @@
 
 Ця діаграма демонструє ієрархію компонентів, розміщення стану та логіку взаємодії (Props Down, Callbacks Up).
 
-App.jsx
-│ 
-└── TodoList.jsx  
+```
+App.tsx
+│
+└── TodoList.tsx
       │  (State Colocation)
       │  (Містить функції-колбеки: handleAddTodo, handleDeleteTodo, handleToggleComplete, handleEditTodo)
-      ├── AddTodoForm.jsx 
+      ├── AddTodoForm.tsx
       │     (State: newTodo)
       │     ↑ onAddTodo(newTask: string)
       │ 
@@ -36,3 +37,4 @@ App.jsx
             ├── [Checkbox] onChange
             ├── [Edit/Save Button] onClick
             └── [Delete Button] onClick
+```
