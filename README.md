@@ -21,3 +21,4 @@
 Ця діаграма демонструє ієрархію компонентів, розміщення стану та логіку взаємодії (Props Down, Callbacks Up).
 
 
+<img width="1319" height="391" alt="Screenshot 2025-10-07 170122" src="https://github.com/user-attachments/assets/2903f752-075e-4b53-aec3-5bcb27ace9a8" />
