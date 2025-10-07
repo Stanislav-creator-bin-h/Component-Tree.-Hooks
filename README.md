@@ -20,21 +20,5 @@
 
 Ця діаграма демонструє ієрархію компонентів, розміщення стану та логіку взаємодії (Props Down, Callbacks Up).
 
-```
-App.tsx
-│
-└── TodoList.tsx
-      │  (State Colocation)
-      │  (Містить функції-колбеки: handleAddTodo, handleDeleteTodo, handleToggleComplete, handleEditTodo)
-      ├── AddTodoForm.tsx
-      │     (State: newTodo)
-      │     ↑ onAddTodo(newTask: string)
-      │ 
-      └── TodoItem.tsx
-            │   (Props: todo, onToggleComplete, onDeleteTodo, onEditTodo)
-            │   (State Colocation: Локально керує станом isEditing: boolean)
-            │ 
-            ├── [Checkbox] onChange
-            ├── [Edit/Save Button] onClick
-            └── [Delete Button] onClick
-```
+
+<img width="1281" height="661" alt="Screenshot 2025-10-07 164200" src="https://github.com/user-attachments/assets/017a85f6-25c7-4e2e-a2cd-a3c34ddd4239" />
